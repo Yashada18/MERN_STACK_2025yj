@@ -2,6 +2,7 @@ h1{
     color:#fdfdfd;
     text-align: center;
     font-size: 50px;
+    margin: 0; /* remove default top/bottom margin to avoid gap between header and nav */
     
 }
 
@@ -60,5 +61,18 @@ nav{
     padding: 10px 0;
     text-align: center;
     color: white;
-    
+    margin: 0; /* ensure nav has no extra margin */
+}
+
+services{
+    background-color: #f3d0b5;
+    padding: 50px 0;
+    text-align: center;
+}
+
+nav a{
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
 }

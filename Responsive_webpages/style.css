@@ -1,0 +1,132 @@
+/* 1st step: Global body css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+
+
+/* 2nd step: Header css */
+h1 {
+  background-color: #081390;
+  color: #fdfdfd;
+  text-align: center;
+  padding: 20px;
+  font-size: 50px;
+  margin: 0; /* remove space below header */
+}
+
+/* 3rd step: Navigation bar css */
+nav {
+  background-color: #081390;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0; /* remove gap between header and nav */
+}
+
+nav a {
+  color: #fdfdfd;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* 4th step: Main content css */
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px 20px;
+  gap: 20px;
+}
+
+.box {
+  background-color: #b5eaf3;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  flex: 1;
+  max-width: 200px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  background-color: #081390;
+  color: #fdfdfd;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: 20px; /* gives a small space above footer */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;  /* centers content */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.blue-section {
+  background-color: #4da6e7;
+}
+
+.blue-section .item {
+  background-color: #fbe9d0;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+
+/* Responsive layout for mobile */
+@media (max-width: 600px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    max-width: 80%;
+  }
+}
+
+@media(max-width:600px){
+    nav a{
+        display: block;
+        margin: 10px 0;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .box{
+        max-width: 80%;
+    }
+
+    .header, footer{
+        padding: 15px 0;
+    }
+}
+
