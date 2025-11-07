@@ -2,22 +2,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First website</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css"> 
+
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header with navigation -->
     <header>
-        <h1>Yashada</h1>
+        <h1 class="logo">Yashada</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="About.html">About</a>
-            <a href="Contact.html">Contact</a>
-            <a href="services.html">Services</a>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
     
-    <p>I'm a 3rd year computer engineering student.</p>
+     <!-- Hero section (main intro) -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Hi, I'm <span>Yashada</span></h2>
+            <p>A 3rd year Computer Engineering student passionate about web development, design, and AI.</p>
+            <a href="About.html" class="btn">Learn More</a>
+        </div>
+        <div class="hero-image">
+            <img src="profile_photo_yj.jpeg" alt="Yashada's photo">
+        </div>
+    </section>
+    <!-- Footer -->
     <footer>
-        <h4>&copy; 2025 Yashada. All rights reserved.</h4>
+        <p>&copy; 2025 Yashada. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -1,24 +1,52 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aboutme</title>
+    <title>About | Yashada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Yashada</h1>
+        <h1 class="logo">Yashada</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="About.html">About</a>
-            <a href="Contact.html">Contact</a>
-            <a href="services.html">Services</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
-
     </header>
-    <h2>About Me</h2>
-    <p>Hello! I'm Yashada Jagtap, a passionate computer engineering student in my 3rd year. I love coding, exploring new technologies, and building innovative projects. Welcome to my personal website where you can learn more about me and get in touch!</p>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm <strong>Yashada</strong>, a 3rd-year Computer Engineering student passionate about technology, web development, and UI/UX design. I love turning ideas into interactive experiences.</p>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>🎓 Education</h3>
+                <p>Currently pursuing B.E. in Computer Engineering.</p>
+            </div>
+
+            <div class="about-card">
+                <h3>💻 Skills</h3>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Python, C++</li>
+                    <li>UI/UX</li>
+                </ul>
+            </div>
+
+            <div class="about-card">
+                <h3>🎯 Interests</h3>
+                <p>Web design, AI, open-source projects, and continuous learning.</p>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <h4>&copy; 2025 Yashada. All rights reserved.</h4>
-    
+        <p>&copy; 2025 Yashada. All rights reserved.</p>
+    </footer>
 </body>
+</html>

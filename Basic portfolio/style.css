@@ -1,78 +1,241 @@
-h1{
-    color:#fdfdfd;
-    text-align: center;
-    font-size: 50px;
-    margin: 0; /* remove default top/bottom margin to avoid gap between header and nav */
-    
+/* Importing Google font for modern look */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fc;
+    color: #333;
 }
 
-p{
-    color:#B6771D;
-    text-align: center;
-    font-size: 30px;
-
-}
-/*contact section styling*/
-
-.contact{
-    background-color: #f3d0b5;
-    padding: 50px 0;
-    text-align: center;
-}
-
-form{
-    background-color: #df9b5c;
-    padding: 20px;
-    border-radius: 5px; 
-    display: inline-block;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-input, textarea{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}   
-
-button{
-    background-color: #7B542F;
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #222;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-} 
-
-button:hover{
-    background-color: #5a3e24;
 }
 
-header, footer{
-    background-color: #7B542F;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
-nav{
-    padding: 10px 0;
-    text-align: center;
-    color: white;
-    margin: 0; /* ensure nav has no extra margin */
+/* Navigation bar styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
-services{
-    background-color: #f3d0b5;
-    padding: 50px 0;
-    text-align: center;
-}
-
-nav a{
-    color: white;
-    margin: 0 15px;
+nav a {
     text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #00bcd4;
+    border-bottom: 2px solid #00bcd4;
+}
+
+/* Hero section layout */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 100px;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, #b9d7ed, #fcdbdb);
+}
+
+/* Hero text */
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero-text span {
+    color: #00bcd4;
+}
+
+.hero-text p {
     font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #00bcd4;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #0097a7;
+}
+
+/* Hero image */
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        margin-top: 20px;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* =======================
+   ABOUT PAGE
+======================= */
+.about {
+    padding: 60px 100px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #00bcd4;
+}
+
+.about p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.about-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* =======================
+   SERVICES PAGE
+======================= */
+.services {
+    padding: 60px 100px;
+    text-align: center;
+}
+
+.services h2 {
+    color: #00bcd4;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.service-card {
+    background: white;
+    width: 280px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+/* =======================
+   CONTACT PAGE
+======================= */
+.contact {
+    padding: 60px 100px;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #00bcd4;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Design for all pages */
+@media (max-width: 768px) {
+    .about, .services, .contact {
+        padding: 40px 20px;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
 }
